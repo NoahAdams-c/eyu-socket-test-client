@@ -3,19 +3,20 @@
  * @Author: chenchen
  * @Date: 2020-02-25 10:58:24
  * @LastEditors: chenchen
- * @LastEditTime: 2020-02-25 17:05:17
+ * @LastEditTime: 2020-02-25 18:08:47
  */
 
 const app = require("express")()
 const child_process = require("child_process")
 const body_parser = require("body-parser")
 const { getServerAccessToken, getClientAccessToken } = require("./auth")
+const { port } = require("./config")
 
 // josn parser
 app.use(body_parser.json())
 
 // create server listen
-const server = app.listen(10086, function() {
+const server = app.listen(port, function() {
 	console.log("Listening on port %d\n", server.address().port)
 })
 
