@@ -3,11 +3,11 @@
  * @Author: chenchen
  * @Date: 2020-02-25 11:12:27
  * @LastEditors: chenchen
- * @LastEditTime: 2020-02-25 16:59:06
+ * @LastEditTime: 2020-02-25 17:48:02
  */
 
 const io = require("socket.io-client")
-const config = require("./config")
+const { ws_host } = require("./config")
 const { logger, deepCopy } = require("./util")
 const { replyList } = require("./static")
 
@@ -71,7 +71,7 @@ process.on("message", data => {
 		event: "",
 		from: "user" // 信令来源： other 非用户， user 用户 ，server 服务器
 	}
-	const socketObj = io(config.server_host, {
+	const socketObj = io(ws_host, {
 		query: {
 			token: _data.client_token
 		}

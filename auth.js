@@ -3,12 +3,12 @@
  * @Author: chenchen
  * @Date: 2020-02-25 13:17:33
  * @LastEditors: chenchen
- * @LastEditTime: 2020-02-25 16:54:48
+ * @LastEditTime: 2020-02-25 17:47:33
  */
 const { baseAjax } = require("cc-vue-util")
-const config = require("./config")
+const { api_host } = require("./config")
 
-const $ajax = baseAjax(config.server_host)
+const $ajax = baseAjax(api_host)
 
 module.exports = {
 	/**
