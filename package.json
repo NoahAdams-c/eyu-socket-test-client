@@ -1,0 +1,19 @@
+{
+  "name": "eyu-socket-test-client",
+  "version": "1.0.0",
+  "description": "eyu-open-api socket test client",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chenchen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cc-vue-util": "^1.0.7",
+    "express": "^4.17.1",
+    "socket.io-client": "^2.3.0"
+  }
+}
